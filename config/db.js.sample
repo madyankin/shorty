@@ -1,0 +1,15 @@
+const config = {
+  client: 'postgres',
+  connection: {
+    host: '127.0.0.1',
+    username: 'shorty',
+    password: '',
+    database: 'shorty'
+  },
+  pool: {
+    max: 15,
+    min: 5
+  }
+}
+
+export default config;

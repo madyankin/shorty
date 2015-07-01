@@ -1,0 +1,28 @@
+{
+  "schema": {
+    "records": {
+      "columns": [
+        {
+          "name": "code",
+          "type": "string",
+          "primary_key": true
+        },
+        {
+          "name": "url",
+          "type": "string",
+          "nullable": false
+        },
+        {
+          "name": "openCount",
+          "type": "integer",
+          "default": "0",
+          "nullable": false
+        }
+      ]
+    }
+  },
+
+  "raw": [
+    "CREATE SEQUENCE codeSeq START 123"
+  ]
+}
