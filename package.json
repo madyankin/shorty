@@ -15,6 +15,7 @@
     "body-parser": "^1.13.1",
     "express": "^4.13.0",
     "express-promise": "^0.4.0",
+    "gulp": "^3.9.0",
     "knex": "^0.8.6",
     "knex-schema-builder": "^0.2.3",
     "pg": "^4.4.0",
