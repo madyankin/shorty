@@ -46,7 +46,7 @@ describe('app', () => {
   });
 
   describe('GET /statistics/:code', () => {
-    it('expandeds URL', (done) => {
+    it('shows stats for URL', (done) => {
       request(app)
         .get('/statistics/HXRC')
         .expect(200, '1')
@@ -62,7 +62,7 @@ describe('app', () => {
   });
 
   describe('GET /expand/:code', () => {
-    it('expandeds URL', (done) => {
+    it('expands URL', (done) => {
       request(app)
         .get('/expand/HXRC')
         .expect(200, 'http://foo.com')
