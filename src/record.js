@@ -39,7 +39,7 @@ function stats(code) {
   return db(tableName)
     .where({ code })
     .first('openCount')
-    .then(row => row.openCount.toString());
+    .then(row => row.openCount);
 }
 
 export default { shorten, log, expand, stats };

@@ -23,6 +23,7 @@
   },
 
   "raw": [
+    "DROP SEQUENCE IF EXISTS codeSeq",
     "CREATE SEQUENCE codeSeq START 123"
   ]
 }

@@ -1,9 +1,11 @@
 function urlForCode(req, code) {
-  let url = `${ req.protocol }://${ req.hostname }/`;
-  if (req.port !== 80) url += `:${ req.port }`;
-  url += `/${ code }`
+  const hasPort = req.port && req.port != 80;
 
-  return code;
+  let url = `${ req.protocol }://${ req.hostname }`;
+  if (hasPort) url += `:${ req.port }`
+  url += `/${ code }`;
+
+  return url;
 }
 
 export default { urlForCode };
