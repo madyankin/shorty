@@ -1,2 +1,4 @@
 require('babel/register')({ stage: 1 });
-require('./src/app');
+
+var start = require('./src/app').start;
+start();

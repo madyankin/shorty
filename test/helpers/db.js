@@ -6,8 +6,8 @@ function initDatabase(done) {
   const schemaPath = path.join(__dirname, '../../db')
 
   schema.install(db, schemaPath, (err) => {
-    if (err) done(err);
-    setTimeout(done, 500);
+    if (err) return done(err);
+    done();
   });
 }
 

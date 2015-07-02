@@ -23,7 +23,11 @@ app.use('/', routes);
 app.use(errorLogger);
 app.use(errorHandler);
 
-const server = app.listen(3000, () => {
-  const { address, port } = server.address();
-  console.log(`Shorty is listening at http://${ address }:${ port }`);
-});
+function start() {
+  const server = app.listen(3000, () => {
+    const { address, port } = server.address();
+    console.log(`Shorty is listening at http://${ address }:${ port }`);
+  });
+}
+
+export default { app, start };

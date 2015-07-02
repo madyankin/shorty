@@ -7,7 +7,8 @@ const router = Router();
 router.post('/shorten', (req, res) => {
   const result = record
     .shorten(req.body.url)
-    .then(code => urlForCode(req, code));
+    .then(code => urlForCode(req, code))
+    .catch(e => res.sendStatus(500));
 
   res.send(result);
 });
