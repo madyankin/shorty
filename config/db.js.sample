@@ -1,15 +1,29 @@
+const env = process.env.NODE_ENV || 'development';
+
 const config = {
-  client: 'postgres',
-  connection: {
-    host: '127.0.0.1',
-    username: 'shorty',
-    password: '',
-    database: 'shorty'
+  development: {
+    client: 'postgres',
+    connection: {
+      host: '127.0.0.1',
+      username: 'shorty',
+      password: '',
+      database: 'shorty'
+    },
+    pool: {
+      max: 15,
+      min: 5
+    }
   },
-  pool: {
-    max: 15,
-    min: 5
+
+  test: {
+    client: 'postgres',
+    connection: {
+      host: '127.0.0.1',
+      username: 'shorty',
+      password: '',
+      database: 'shorty_test'
+    }
   }
 }
 
-export default config;
+export default config[env];
